@@ -17,7 +17,7 @@
                     var objectID = input.val();
                     if (objectID) {
                         var editURL = lookupURL.split('?', 1)[0] + objectID + '/';
-                        editLink = $('<a target="_blank" style="position:relative;top:5px;margin-left:20px;white-space:nowrap;font-weight:bold;" onclick="window.open(\'' + editURL + '?_popup=1\',\'\',\'width=1000,height=500\'); return false;" href="' + editURL + '">Modifier les données</a>');
+                        editLink = $('<a target="_blank" id="modif_objet_lie_'+objectID+'_mo" style="position:relative;top:5px;margin-left:20px;white-space:nowrap;font-weight:bold;" onclick="showAdminPopup(this); return false;" href="' + editURL + '">Modifier les données</a>');
                         editLink.insertAfter(wrapper);
                     }
                 };
